@@ -24,9 +24,19 @@ There are many benefits to using TDD:
 * TDD makes it easy to identify where bugs have appeared in code through clear error messaging.
 
 ## How to run tests
+Let's try out TDD by running tests and fixing code on your own computer.
 
-## ee
+1. Download and unzip the project located here.
 
-## 44
+2. Open index.html in Google Chrome and open the JavaScript Console in Chrome DevTools (located in View > Developer > JavaScript Console).Verify that you are in the "Console" tab.
+3. In the console, enter the command to run the tests for this project, Tests.runAllTests(). As you can see, there are multiple failing tests. Let's check them out.
+4. Open the project in a text editor. Open the tests.js file. Looking at Tests.runAllTests, we can see that it runs through all of our tests — in this case Tests.testReturnsTrue, Tests.testReturnsHello, and Tests.testReturnsTheMeaningOfLife. Each test runs its corresponding method and checks to see if the method returns the expected value. Since the tests are failing, we can infer that they are not implemented properly. Let's look at the code.
+5. Open main.js and examine the Main.returnsTrue method. As you might notice, this method returns false. Change return false; to return true;.
+6. Since we believe we have now fixed the method, go back to Chrome and re-run Tests.runAllTests(). The 'returnsTrue' test should now pass!
+7. Follow the same process for the Main.returnsHello() method. Fix what you believe is causing the bug and re-run the tests to see if the 'returnsHello' test now passes. Iterate until the test passes.
+8. Once you have fixed the .returnsHello() method, fix the .returnsTheMeaningOfLife() method. This one is a little trickier since it actually has two failing tests. One fix should solve both of them though. Iterate until you get all of the tests to pass.
+
+Congratulations! You now have a working test suite for all of these methods. As you can imagine, when using TDD to produce full web pages there will be many more tests to run and methods to write/fix. However, the steps will always remain the same: run, implement, and run again. Making TDD a permanent part of your development workflow will help ensure your code always works as intended and gives you incentive to keep implementing features!
+
 
 ##
